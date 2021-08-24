@@ -9,7 +9,7 @@ class ConnectivityScreen extends StatefulWidget {
 }
 
 class _ConnectivityScreenState extends State<ConnectivityScreen> {
-  bool hasInternet = false; //
+  bool hasInternet = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
