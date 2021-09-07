@@ -11,9 +11,9 @@ class NavigationService {
     return _navigationKey.currentState.pop();
   }
 
-  static Future<dynamic> navigateTo() {
-    return _navigationKey.currentState
-        .push(MaterialPageRoute(builder: (context) => ConnectivityScreen()));
+  static Future<dynamic> navigateTo(Widget page) {
+    return _navigationKey.currentState.push(
+        MaterialPageRoute(builder: (context) => page ?? ConnectivityScreen()));
   }
 
   static void popScreen() {
