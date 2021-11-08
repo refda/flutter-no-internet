@@ -5,7 +5,7 @@ import 'package:no_internet_check/internet_connectivity/static_index.dart';
 import 'navigation_Service.dart';
 
 class InternetChecker {
-  InternetChecker([Widget page]) {
+  InternetChecker([Widget? page]) {
     InternetConnectionChecker().onStatusChange.listen((status) {
       switch (status) {
         case InternetConnectionStatus.connected:

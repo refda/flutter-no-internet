@@ -1,17 +1,17 @@
 name: no_internet_check
 description: Automatically show no internet screen on top of your current screen and  when there is internet it automatically pop the no inter screen.
-version: 0.0.2
+version: 0.0.5
 homepage: https://gitlab.com/abnawaz14/no-internet-check/-/tree/master
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
   flutter:
     sdk: flutter
   internet_connection_checker: ^0.0.1+2
-  fluttertoast: ^8.0.8
+  flutter_toastr: ^1.0.3
 
 dev_dependencies:
   flutter_test:

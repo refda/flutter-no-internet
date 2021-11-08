@@ -8,15 +8,15 @@ class NavigationService {
   static GlobalKey<NavigatorState> get navigationKey => _navigationKey;
 
   static void pop() {
-    return _navigationKey.currentState.pop();
+    return _navigationKey.currentState!.pop();
   }
 
-  static Future<dynamic> navigateTo(Widget page) {
-    return _navigationKey.currentState.push(
+  static Future<dynamic> navigateTo(Widget? page) {
+    return _navigationKey.currentState!.push(
         MaterialPageRoute(builder: (context) => page ?? ConnectivityScreen()));
   }
 
   static void popScreen() {
-    _navigationKey.currentState.pop();
+    _navigationKey.currentState!.pop();
   }
 }

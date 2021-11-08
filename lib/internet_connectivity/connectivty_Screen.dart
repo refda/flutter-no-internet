@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+import 'package:flutter_toastr/flutter_toastr.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 
 class ConnectivityScreen extends StatefulWidget {
@@ -48,15 +48,12 @@ class _ConnectivityScreenState extends State<ConnectivityScreen> {
                         print('YAY! Free cute dog pics!');
                       } else {
                         print('No internet :( Reason:');
-                        await Fluttertoast.cancel();
-                        Fluttertoast.showToast(
-                            msg: "No internet :( Reason:",
-                            toastLength: Toast.LENGTH_SHORT,
-                            gravity: ToastGravity.CENTER,
-                            timeInSecForIosWeb: 1,
-                            backgroundColor: Colors.red,
-                            textColor: Colors.white,
-                            fontSize: 16.0);
+                        FlutterToastr.show(
+                          "No internet :( Reason:",
+                          context,
+                          backgroundColor: Colors.red,
+                          duration: 2,
+                        );
                         setState(() {
                           hasInternet = false;
                         });
