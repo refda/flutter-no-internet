@@ -1,5 +1,5 @@
 
->* This Code comes from https://github.com/flutter-developer-lab/no_internet_check *
+>* This Code comes from https://gitlab.com/abnawaz14/no-internet-check/-/tree/master *
 
 # no_internet_check
 
@@ -18,7 +18,7 @@ add this line inside MaterialApp.
 ```
 call this method inside splash screen or inside your app first screen. if you are using await inside your main method. then you can also paste this code inside your main method.
 ```dart
- InternetChecker(); 
+ InternetChecker(); //optional: you can pass custom no internet page as an argument
 ```
 
 And You are done
