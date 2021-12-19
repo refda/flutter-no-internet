@@ -17,3 +17,7 @@
 ## [0.0.5] - TODO: Add release date.
 
 * TODO: ADD other platform support.
+
+## [0.0.6] - TODO: Add release date.
+
+* TODO: ADD Global Key Support.
