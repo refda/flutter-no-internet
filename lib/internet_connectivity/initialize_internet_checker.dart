@@ -12,13 +12,14 @@ class InternetChecker {
           print('Data connection is available.');
           if (IndexClass.index == 1) {
             IndexClass.index = 0;
-            NavigationService.popScreen(navigationKey);
+            NavigationService.popScreen(navigationKey: navigationKey);
           }
           break;
         case InternetConnectionStatus.disconnected:
           print('Data connection is not available.');
           IndexClass.index = 1;
-          NavigationService.navigateTo(page, navigationKey);
+          NavigationService.navigateTo(
+              page: page, navigationKey: navigationKey);
           break;
       }
     });

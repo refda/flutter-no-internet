@@ -12,7 +12,7 @@ class NavigationService {
   }
 
   static Future<dynamic> navigateTo(
-      Widget? page, GlobalKey<NavigatorState>? navigationKey) {
+      {Widget? page, GlobalKey<NavigatorState>? navigationKey}) {
     if (navigationKey == null) {
       return _navigationKey.currentState!.push(MaterialPageRoute(
           builder: (context) => page ?? ConnectivityScreen()));
@@ -21,7 +21,7 @@ class NavigationService {
           builder: (context) => page ?? ConnectivityScreen()));
   }
 
-  static void popScreen(GlobalKey<NavigatorState>? navigationKey) {
+  static void popScreen({GlobalKey<NavigatorState>? navigationKey}) {
     if (navigationKey == null) {
       _navigationKey.currentState!.pop();
     } else

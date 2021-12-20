@@ -12,11 +12,12 @@ A Flutter Package that depends on internet_connection_checker and flutter_toast.
 
 You can refer to example code.
 
-add this line inside MaterialApp.
+add this line inside MaterialApp or <b> if you are using your own key add that one.</b>
 ```
  navigatorKey: NavigationService.navigationKey,
 ```
 call this method inside splash screen or inside your app first screen. if you are using await inside your main method. then you can also paste this code inside your main method.
+<b>if you are using your own key pass it inside constructor</b>
 ```dart
  InternetChecker(); //optional: you can pass custom no internet page as an argument
 ```
@@ -25,6 +26,7 @@ And You are done
 
 
 if you are hitting autologin api inside splash screen
+<b>if you are using your own key pass it inside ``navigateTo()`` constructor</b>
 ```dart
  if (IndexClass.index == 0) {  // there is internet
        checkAutoLogin();

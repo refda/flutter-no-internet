@@ -16,51 +16,53 @@ class _ConnectivityScreenState extends State<ConnectivityScreen> {
       backgroundColor: Colors.white,
       body: Container(
         child: Center(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                'images/noconnection.jpg',
-                fit: BoxFit.contain,
-                package: 'no_internet_check',
-              ),
-              IgnorePointer(
-                ignoring: hasInternet,
-                child: IconButton(
-                    icon: Container(
-                        width: 80,
-                        height: 80,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.blueGrey[200],
-                        ),
-                        child: hasInternet
-                            ? CupertinoActivityIndicator()
-                            : Icon(Icons.refresh)),
-                    onPressed: () async {
-                      setState(() {
-                        hasInternet = true;
-                      });
-                      bool result =
-                          await InternetConnectionChecker().hasConnection;
-                      if (result == true) {
-                        print('YAY! Free cute dog pics!');
-                      } else {
-                        print('No internet :( Reason:');
-                        FlutterToastr.show(
-                          "No internet :( Reason:",
-                          context,
-                          backgroundColor: Colors.red,
-                          duration: 2,
-                        );
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  'images/noconnection.jpg',
+                  fit: BoxFit.contain,
+                  package: 'no_internet_check',
+                ),
+                IgnorePointer(
+                  ignoring: hasInternet,
+                  child: IconButton(
+                      icon: Container(
+                          width: 80,
+                          height: 80,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.blueGrey[200],
+                          ),
+                          child: hasInternet
+                              ? CupertinoActivityIndicator()
+                              : Icon(Icons.refresh)),
+                      onPressed: () async {
                         setState(() {
-                          hasInternet = false;
+                          hasInternet = true;
                         });
-                      }
-                    }),
-              ),
-            ],
+                        bool result =
+                            await InternetConnectionChecker().hasConnection;
+                        if (result == true) {
+                          print('YAY! Free cute dog pics!');
+                        } else {
+                          print('No internet :( Reason:');
+                          FlutterToastr.show(
+                            "No internet :( Reason:",
+                            context,
+                            backgroundColor: Colors.red,
+                            duration: 2,
+                          );
+                          setState(() {
+                            hasInternet = false;
+                          });
+                        }
+                      }),
+                ),
+              ],
+            ),
           ),
         ),
       ),
