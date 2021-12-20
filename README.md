@@ -1,10 +1,10 @@
 
->* This Code comes from https://gitlab.com/abnawaz14/no-internet-check/-/tree/master *
+>* This Code comes from https://gitlab.com/abnawaz14/no-internet-check *
 
 # no_internet_check
 
 
-A Flutter Package that depends on internet_connection_checker and flutter_toast. This package check the internet connectivity. If there is no internet, it show not internet screen. And if there is internet it will return you back to previous screen where you are.
+A Flutter Package that depends on internet_connection_checker and flutter_toast. This package check the internet connectivity. If there is no internet, it show no internet screen. And if there is internet it will return you back to previous screen where you are.
 
 >*Note that this plugin is just a test. you can fork it and make it better.*
 

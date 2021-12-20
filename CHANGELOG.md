@@ -1,3 +1,11 @@
+## [0.0.9] - TODO: Add release date.
+
+* TODO: add license
+
+## [0.0.8] - TODO: Add release date.
+
+* TODO: update repository url
+
 ## [0.0.7] - TODO: Add release date.
 
 * TODO: Make Connection Screen Scrollable
