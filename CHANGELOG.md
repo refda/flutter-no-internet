@@ -1,3 +1,7 @@
+## [1.0.0] - TODO: Add release date.
+
+* TODO: custom no internet page docs update
+
 ## [0.0.9] - TODO: Add release date.
 
 * TODO: add license

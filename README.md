@@ -22,7 +22,14 @@ call this method inside splash screen or inside your app first screen. if you ar
  InternetChecker(); //optional: you can pass custom no internet page as an argument
 ```
 
-And You are done
+<b>And You are done.</b>
+
+
+If you are using your own custom no internet page and you have pop() functionality. Then before poping the custom no internet page, add this line
+
+```dart
+ IndexClass.index = 0;
+```
 
 
 if you are hitting autologin api inside splash screen
