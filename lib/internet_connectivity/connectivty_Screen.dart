@@ -46,11 +46,11 @@ class _ConnectivityScreenState extends State<ConnectivityScreen> {
                         bool result =
                             await InternetConnectionChecker().hasConnection;
                         if (result == true) {
-                          print('YAY! Free cute dog pics!');
+                          //print('INTERNET');
                         } else {
-                          print('No internet :( Reason:');
+                          //print('NO INTERNET');
                           FlutterToastr.show(
-                            "No internet :( Reason:",
+                            "Bitte Internetverbindung überprüfen und erneut versuchen.",
                             context,
                             backgroundColor: Colors.red,
                             duration: 2,
